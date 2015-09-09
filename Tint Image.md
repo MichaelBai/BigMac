@@ -1,13 +1,9 @@
 # Quartz
 
+- [如何使用CGImageCreateWithMaskingColors去除image内的指定color](https://gist.github.com/Shilo/1292152)
 
-[https://gist.github.com/Shilo/1292152](https://gist.github.com/Shilo/1292152)
+- [Tint PNG image](http://stackoverflow.com/a/7377827/1391851)
 
-如何使用CGImageCreateWithMaskingColors去除image内的指定color
-
-[http://stackoverflow.com/a/7377827/1391851](http://stackoverflow.com/a/7377827/1391851)
-
-Tint PNG image
 ```
 UIGraphicsBeginImageContextWithOptions (myIconImage.size, NO, [[UIScreen mainScreen] scale]); // for correct resolution on retina, thanks @MobileVet
 CGContextRef context = UIGraphicsGetCurrentContext();
@@ -23,11 +19,7 @@ UIImage *coloredImage = UIGraphicsGetImageFromCurrentImageContext();
 UIGraphicsEndImageContext();
 ```
 
-[http://iosdevelopertips.com/graphics/convert-an-image-uiimage-to-grayscale.html](http://iosdevelopertips.com/graphics/convert-an-image-uiimage-to-grayscale.html)
+- [Convert an Image (UIImage) to Grayscale](http://iosdevelopertips.com/graphics/convert-an-image-uiimage-to-grayscale.html)
 
-Convert an Image (UIImage) to Grayscale
-
-[http://nscookbook.com/2013/05/ios-programming-recipe-24-creating-a-mask-for-clipping-drawings/](http://nscookbook.com/2013/05/ios-programming-recipe-24-creating-a-mask-for-clipping-drawings/)
-
-使用Mask
+- [使用Mask](http://nscookbook.com/2013/05/ios-programming-recipe-24-creating-a-mask-for-clipping-drawings/)
 
