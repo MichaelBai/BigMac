@@ -8,6 +8,20 @@
 [http://stackoverflow.com/a/7377827/1391851](http://stackoverflow.com/a/7377827/1391851)
 
 Tint PNG image
+```
+UIGraphicsBeginImageContextWithOptions (myIconImage.size, NO, [[UIScreen mainScreen] scale]); // for correct resolution on retina, thanks @MobileVet
+CGContextRef context = UIGraphicsGetCurrentContext();
+
+CGContextTranslateCTM(context, 0, myIconImage.size.height);
+CGContextScaleCTM(context, 1.0, -1.0);
+
+CGRect rect = CGRectMake(0, 0, myIconImage.size.width, myIconImage.size.height);
+
+// image drawing code here
+
+UIImage *coloredImage = UIGraphicsGetImageFromCurrentImageContext();
+UIGraphicsEndImageContext();
+```
 
 [http://iosdevelopertips.com/graphics/convert-an-image-uiimage-to-grayscale.html](http://iosdevelopertips.com/graphics/convert-an-image-uiimage-to-grayscale.html)
 
